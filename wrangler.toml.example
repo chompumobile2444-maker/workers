@@ -1,0 +1,16 @@
+name = "chompoo-r2-upload"
+main = "chompoo-r2-upload.js"
+compatibility_date = "2026-07-27"
+
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "product-images-r2"
+
+[vars]
+# Comma-separated allowlist. Supports wildcard host patterns like *.pages.dev
+ALLOWED_ORIGINS = "https://your-site.pages.dev,https://www.yourdomain.com,*.pages.dev"
+# Optional: if set, Worker will return this base URL instead of workers.dev/files/... proxy URL
+R2_PUBLIC_BASE_URL = ""
+# Optional: if set, frontend must send Authorization: Bearer <UPLOAD_TOKEN>
+UPLOAD_TOKEN = ""
+MAX_UPLOAD_MB = "10"
